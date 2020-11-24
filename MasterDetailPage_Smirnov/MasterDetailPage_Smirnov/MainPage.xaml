@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:XXX.ViewModel"
+             xmlns:conv="clr-namespace:XXX.Converters"
+             xmlns:local="clr-namespace:XXX;assembly=XXX"
+             x:Class="MainPage"
+             IsPresented="{Binding MasterIsPresented}"
+             Title="test">
+    <MasterDetailPage.BindingContext>
+        <vm:MainViewModel />
+    </MasterDetailPage.BindingContext>
+
+    <MasterDetailPage.Master >
+        <local:MainMenu/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage  Title="test1">
